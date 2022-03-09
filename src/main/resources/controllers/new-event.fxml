@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="459.0" prefWidth="380.0" stylesheets="@../CSS/StyleSheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lab6.map_socialnetwork_gui.controllers.NewEventController">
+    <children>
+        <GridPane hgap="5.0" layoutX="3.0" layoutY="-2.0" prefHeight="459.0" prefWidth="380.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.5" minWidth="10.0" prefWidth="187.2000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.5" minWidth="10.0" prefWidth="187.19997558593752" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="141.60001220703126" minHeight="0.0" prefHeight="27.200009155273438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.60001220703126" minHeight="10.0" prefHeight="37.600006103515625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.60001220703126" minHeight="9.199987792968741" prefHeight="52.79999389648438" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="328.8" minHeight="10.0" prefHeight="263.20001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.19998779296873" minHeight="10.0" prefHeight="51.19998779296873" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="27.0" prefWidth="188.0" text="Event Name" textFill="#3305ff">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+
+
+                <TextField fx:id="textFieldEventName" prefHeight="15.0" prefWidth="187.0" GridPane.columnIndex="1" />
+            <ImageView fx:id="eventImage" fitHeight="254.0" fitWidth="374.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                <Button minWidth="16.0" mnemonicParsing="false" onAction="#handleAddEvent" prefHeight="42.0" prefWidth="204.0" text="Add Event" GridPane.rowIndex="4">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="187.0" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="26.0" prefWidth="196.0" text="Event Date" textFill="#1500ff" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <DatePicker fx:id="eventDate" prefHeight="80.0" prefWidth="208.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#handleChooseImage" prefHeight="45.0" prefWidth="418.0" text="Choose Image" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+        </GridPane>
+    </children>
+</AnchorPane>

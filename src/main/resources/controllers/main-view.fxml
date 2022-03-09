@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="399.0" prefWidth="709.0" stylesheets="@../CSS/StyleSheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lab6.map_socialnetwork_gui.controllers.MainController">
+    <TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="874.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <tabs>
+          <Tab fx:id="profileTab" text="Profile">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="873.0">
+                      <children>
+                     <ScrollPane fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="422.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <content>
+                           <GridPane fx:id="gridPanePage" prefHeight="1178.0" prefWidth="856.0">
+                             <columnConstraints>
+                               <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="362.39996337890625" />
+                               <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="357.60003662109375" />
+                             </columnConstraints>
+                             <rowConstraints>
+                               <RowConstraints />
+                               <RowConstraints maxHeight="43.000006103515624" minHeight="10.0" prefHeight="36.60001220703125" vgrow="SOMETIMES" />
+                               <RowConstraints maxHeight="132.20001831054688" minHeight="0.0" prefHeight="23.79998779296875" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="225.80000000000004" minHeight="10.0" prefHeight="225.80000000000004" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="19.200048828124977" minHeight="0.0" prefHeight="5.600012207031227" vgrow="SOMETIMES" />
+                                 <RowConstraints maxHeight="20.799999999999955" minHeight="426.0" prefHeight="15.199987792968727" vgrow="SOMETIMES" />
+                             </rowConstraints>
+                              <children>
+                                      <Label fx:id="pageUsernameLabel" prefHeight="31.0" prefWidth="426.0" text="User Name" textFill="#24aaf0" GridPane.rowIndex="1">
+                                          <font>
+                                              <Font name="Times New Roman Bold" size="38.0" />
+                                          </font>
+                                      </Label>
+                                      <Label prefHeight="34.0" prefWidth="84.0" text="Friends" textFill="#24aaf0" GridPane.rowIndex="2">
+                                          <font>
+                                              <Font name="Times New Roman Bold" size="23.0" />
+                                          </font>
+                                      </Label>
+                                 <Button fx:id="seeAllMessages" mnemonicParsing="false" onAction="#onButtonSeeAllMessages" prefHeight="45.0" prefWidth="474.0" text="Start new / Continue conversations" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                 </Button>
+                                      <TableView fx:id="requestsTableView1" prefHeight="134.0" prefWidth="424.0" GridPane.rowIndex="9" GridPane.rowSpan="3">
+                                          <columns>
+                                              <TableColumn fx:id="tableColumnRequestsFirstName1" prefWidth="180.0" text="First Name" />
+                                              <TableColumn fx:id="tableColumnRequestsLastName1" prefWidth="180.0" text="Last Name" />
+                                              <TableColumn fx:id="tableColumnRequestsDate1" prefWidth="180.0" text="Date" />
+                                          </columns>
+                                          <columnResizePolicy>
+                                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                          </columnResizePolicy>
+                                      </TableView>
+                                      <TableView fx:id="sentRequestsTableView1" prefHeight="194.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.rowSpan="3">
+                                          <columns>
+                                              <TableColumn fx:id="tableColumnRequestsRequestID11" prefWidth="180.0" text="Request ID" visible="false" />
+                                              <TableColumn fx:id="tableColumnRequestsUserID11" prefWidth="180.0" text="User ID" visible="false" />
+                                              <TableColumn fx:id="tableColumnSentRequestsFirstName1" prefWidth="180.0" text="First Name" />
+                                              <TableColumn fx:id="tableColumnSentRequestsLastName1" prefWidth="180.0" text="Last Name" />
+                                              <TableColumn fx:id="tableColumnSentRequestsDate1" prefWidth="300.0" text="Date" />
+                                              <TableColumn fx:id="tableColumnSentRequestsStatus1" prefWidth="48.79998779296875" text="Status" />
+                                          </columns>
+                                          <columnResizePolicy>
+                                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                          </columnResizePolicy>
+                                      </TableView>
+                                 <TableView fx:id="friendsTableView1" prefHeight="270.0" prefWidth="720.0" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="3">
+                                    <columns>
+                                       <TableColumn fx:id="tableColumnFriendshipID1" prefWidth="180.0" text="FriendshipID" visible="false" />
+                                       <TableColumn fx:id="tableColumnFirstName1" prefWidth="180.0" text="First Name" />
+                                       <TableColumn fx:id="tableColumnLastName1" prefWidth="180.0" text="Last Name" />
+                                       <TableColumn fx:id="tableColumnDate1" prefWidth="180.0" text="Date" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                 </TableView>
+                                 <HBox fx:id="hBoxRecivedRequests" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                    <children>
+                                            <Label prefHeight="34.0" prefWidth="216.0" text=" Recived Requests" textFill="WHITE">
+                                                <font>
+                                                    <Font name="System Bold" size="23.0" />
+                                                </font>
+                                            </Label>
+                                            <Button fx:id="seeAllRequests" mnemonicParsing="false" onAction="#onButtonSeeAllRequests" prefHeight="38.0" prefWidth="234.0" text="See all requests">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                          <padding>
+                                             <Insets bottom="5.0" />
+                                          </padding>
+                                            </Button>
+                                    </children>
+                                 </HBox>
+                                 <HBox fx:id="hBoxSentRequests" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                    <children>
+                                            <Label prefHeight="34.0" prefWidth="205.0" text=" Sent Requests" textFill="WHITE">
+                                                <font>
+                                                    <Font name="System Bold" size="23.0" />
+                                                </font>
+                                            </Label>
+                                            <Button fx:id="seeAllSentRequests" mnemonicParsing="false" onAction="#onButtonSeeAllSentRequests" prefHeight="38.0" prefWidth="246.0" text="See all sent request">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                          <padding>
+                                             <Insets bottom="5.0" />
+                                          </padding>
+                                            </Button>
+                                    </children>
+                                 </HBox>
+                                 <HBox fx:id="hBoxPageFriends" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+                                    <children>
+                                            <Button fx:id="seeAllFriends" mnemonicParsing="false" onAction="#onButtonSeeAllFriendsClick" prefHeight="45.0" prefWidth="320.0" text="See all friends" HBox.hgrow="ALWAYS">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                            </Button>
+                                            <Button mnemonicParsing="false" onAction="#handleSearchFriend" prefHeight="45.0" prefWidth="321.0" text="Search new friend" HBox.hgrow="ALWAYS">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                            </Button>
+                                            <Button mnemonicParsing="false" onAction="#handleDeletePage" prefHeight="45.0" prefWidth="234.0" text="DELETE" HBox.hgrow="ALWAYS">
+                                                <font>
+                                                    <Font size="15.0" />
+                                                </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                            </Button>
+                                    </children>
+                                 </HBox>
+                                 <HBox fx:id="hBoxPageAcceptReject" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="12">
+                                    <children>
+                                       <Button alignment="CENTER" mnemonicParsing="false" onAction="#onPageButtonAcceptClick" prefHeight="50.0" prefWidth="200.0" text="Accept">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                       </Button>
+                                       <Button alignment="CENTER" mnemonicParsing="false" onAction="#onPageButtonRejectClick" prefHeight="50.0" prefWidth="200.0" text="Reject">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                       </Button>
+                                    </children>
+                                 </HBox>
+                                 <HBox fx:id="hBoxPageCencelRemove" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12">
+                                    <children>
+                                       <Button alignment="CENTER" mnemonicParsing="false" onAction="#onPageButtonCancelRequestClick" prefHeight="45.0" prefWidth="450.0" text="Cancel/Remove request" textAlignment="CENTER">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                          <HBox.margin>
+                                             <Insets bottom="5.0" />
+                                          </HBox.margin>
+                                       </Button>
+                                    </children>
+                                 </HBox>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="14">
+                                    <children>
+                                       <SplitPane dividerPositions="0.8448766603415561" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                         <items>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <GridPane layoutX="101.0" layoutY="41.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                     <columnConstraints>
+                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                     </columnConstraints>
+                                                     <rowConstraints>
+                                                       <RowConstraints maxHeight="112.00000610351563" minHeight="0.0" prefHeight="8.800006294250494" vgrow="SOMETIMES" />
+                                                       <RowConstraints maxHeight="236.8" minHeight="10.0" prefHeight="227.99999370574952" vgrow="SOMETIMES" />
+                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                     </rowConstraints>
+                                                      <children>
+                                                         <ListView fx:id="listViewEvents" onMouseClicked="#loadParticipants" prefHeight="422.0" prefWidth="873.0" GridPane.rowSpan="3" />
+                                                         <TableView fx:id="tableViewEvents" prefHeight="329.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                                           <columns>
+                                                             <TableColumn fx:id="firstNameEvents" prefWidth="192.79998779296875" text="First Name" />
+                                                             <TableColumn fx:id="lastNameEvents" minWidth="0.0" prefWidth="236.79998779296875" text="Last Name" />
+                                                           </columns>
+                                                         </TableView>
+                                                         <Label prefHeight="46.0" prefWidth="446.0" text="Participants" textFill="#24aaf0" GridPane.columnIndex="1">
+                                                            <font>
+                                                               <Font name="System Bold" size="30.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </GridPane>
+                                                </children>
+                                             </AnchorPane>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <GridPane layoutX="325.0" layoutY="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                     <columnConstraints>
+                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                     </columnConstraints>
+                                                     <rowConstraints>
+                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                     </rowConstraints>
+                                                      <children>
+                                                         <Button mnemonicParsing="false" onAction="#onButtonJoinEventClick" prefHeight="46.0" prefWidth="387.0" text="Join Event" GridPane.halignment="CENTER" />
+                                                         <Button mnemonicParsing="false" onAction="#onButtonLeaveEventClick" prefHeight="45.0" prefWidth="415.0" text="Leave Event" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                                         <Button mnemonicParsing="false" onAction="#onButtonAddNewEventClick" prefHeight="45.0" prefWidth="303.0" text="Add new event" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                                      </children>
+                                                   </GridPane>
+                                                </children>
+                                             </AnchorPane>
+                                         </items>
+                                       </SplitPane>
+                                    </children>
+                                 </AnchorPane>
+                              </children>
+                           </GridPane>
+                        </content>
+                     </ScrollPane>
+                      </children>
+                  </AnchorPane>
+              </content>
+          </Tab>
+        <Tab onSelectionChanged="#initModelFriend" text="Friends">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="874.0">
+                   <children>
+                      <SplitPane dividerPositions="0.6857429718875502" orientation="VERTICAL" prefHeight="335.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                         <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                               <children>
+                                  <TableView fx:id="friendsTableView" prefHeight="270.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                     <columns>
+                                        <TableColumn fx:id="tableColumnFriendshipID" prefWidth="180.0" text="FriendshipID" visible="false" />
+                                        <TableColumn fx:id="tableColumnFirstName" prefWidth="180.0" text="First Name" />
+                                        <TableColumn fx:id="tableColumnLastName" prefWidth="180.0" text="Last Name" />
+                                        <TableColumn fx:id="tableColumnDate" prefWidth="180.0" text="Date" />
+                                     </columns>
+                                    <columnResizePolicy>
+                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                  </TableView>
+                               </children>
+                            </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="719.0">
+                               <children>
+                                  <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSearchFriend" prefHeight="40.0" prefWidth="230.0" text="Search new friend">
+                                     <font>
+                                        <Font size="15.0" />
+                                     </font>
+                                  </Button>
+                                  <Button layoutX="23.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" prefWidth="159.0" text="Delete">
+                                     <font>
+                                        <Font size="15.0" />
+                                     </font>
+                                  </Button>
+                               </children>
+                            </AnchorPane>
+                         </items>
+                      </SplitPane>
+                   </children></AnchorPane>
+          </content>
+        </Tab>
+        <Tab onSelectionChanged="#initModelRequests" text="Requests">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                   <children>
+                      <SplitPane dividerPositions="0.7678571428571429" layoutX="280.0" layoutY="79.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="232.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <items>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                              <children>
+                                 <TableView fx:id="requestsTableView" layoutX="159.0" layoutY="-3.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                   <columns>
+                                       <TableColumn fx:id="tableColumnRequestsFirstName" prefWidth="180.0" text="First Name" />
+                                       <TableColumn fx:id="tableColumnRequestsLastName" prefWidth="180.0" text="Last Name" />
+                                       <TableColumn fx:id="tableColumnRequestsDate" prefWidth="180.0" text="Date" />
+                                   </columns>
+                                    <columnResizePolicy>
+                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                 </TableView>
+                              </children></AnchorPane>
+                          <AnchorPane fx:id="AnchorPaneAcceptReject" minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="718.0">
+                              <children>
+                                 <GridPane alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                   <columnConstraints>
+                                     <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                     <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   </columnConstraints>
+                                   <rowConstraints>
+                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   </rowConstraints>
+                                    <children>
+                                       <Button alignment="CENTER" mnemonicParsing="false" onAction="#onButtonAcceptClick" prefHeight="50.0" prefWidth="200.0" text="Accept">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                          <GridPane.margin>
+                                             <Insets left="15.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button alignment="CENTER" mnemonicParsing="false" onAction="#onButtonRejectClick" prefHeight="50.0" prefWidth="200.0" text="Reject" GridPane.columnIndex="1">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                          <GridPane.margin>
+                                             <Insets right="15.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                    </children>
+                                 </GridPane>
+                              </children></AnchorPane>
+                        </items>
+                      </SplitPane>
+                   </children></AnchorPane>
+          </content>
+        </Tab>
+         <Tab onSelectionChanged="#initModelSentRequests" text="Sent requests">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <SplitPane dividerPositions="0.7678571428571429" layoutX="244.0" layoutY="88.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="232.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <items>
+                           <AnchorPane minHeight="0.0" minWidth="0.0">
+                              <children>
+                                 <TableView fx:id="sentRequestsTableView" layoutX="159.0" layoutY="-3.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columns>
+                                       <TableColumn fx:id="tableColumnRequestsRequestID1" prefWidth="180.0" text="Request ID" visible="false" />
+                                       <TableColumn fx:id="tableColumnRequestsUserID1" prefWidth="180.0" text="User ID" visible="false" />
+                                       <TableColumn fx:id="tableColumnSentRequestsFirstName" prefWidth="180.0" text="First Name" />
+                                       <TableColumn fx:id="tableColumnSentRequestsLastName" prefWidth="180.0" text="Last Name" />
+                                       <TableColumn fx:id="tableColumnSentRequestsDate" prefWidth="180.0" text="Date" />
+                                       <TableColumn fx:id="tableColumnSentRequestsStatus" prefWidth="75.0" text="Status" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                 </TableView>
+                              </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="AnchorPaneAcceptReject1" minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="718.0">
+                              <children>
+                                 <Button layoutX="209.0" layoutY="19.0" mnemonicParsing="false" onAction="#onButtonCancelRequestClick" prefHeight="50.0" prefWidth="300.0" text="Cancel/Remove request" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+                                    <font>
+                                       <Font size="16.0" />
+                                    </font>
+                                 </Button>
+                              </children>
+                           </AnchorPane>
+                        </items>
+                     </SplitPane>
+                  </children>
+               </AnchorPane>
+           </content>
+         </Tab>
+         <Tab text="Messages">
+           <content>
+               <AnchorPane prefHeight="400.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+                  <BorderPane fx:id="borderPane" prefHeight="426.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <VBox prefHeight="425.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+                           <children>
+                                         <Label fx:id="usernameLabel" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="400.0" text="Nume utilizator" VBox.vgrow="NEVER">
+                                             <font>
+                                                 <Font name="CentSchbkCyrill BT Bold" size="25.0" />
+                                             </font>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                                         </Label>
+                              <HBox prefHeight="47.0" prefWidth="287.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/av6584c34aabb39f00a10.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="searchFriendMessage" prefHeight="52.0" prefWidth="343.0" promptText="Search">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                                     <TableView fx:id="userList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#loadMessages" prefHeight="362.0" prefWidth="444.0" VBox.vgrow="ALWAYS">
+                                         <columns>
+                                             <TableColumn fx:id="tableusersPrenume" prefWidth="104.79998475313187" text="First Name" />
+                                             <TableColumn fx:id="tableUsersNume" prefWidth="113.60000610351562" text="Last Name" />
+                                             <TableColumn fx:id="tableusersid" prefWidth="75.0" text="id" visible="false" />
+                                         </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                     </TableView>
+                           </children>
+                        </VBox>
+                     </left>
+                     <center>
+                        <VBox prefHeight="426.0" prefWidth="653.0" BorderPane.alignment="CENTER">
+                           <children>
+                                     <ListView fx:id="chatPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="358.0" prefWidth="403.0" VBox.vgrow="ALWAYS" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                 <children>
+                                             <TextArea fx:id="messageBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#sendMethod" prefHeight="82.0" prefWidth="559.0" promptText="Enter Message..." scaleShape="false" wrapText="true" HBox.hgrow="ALWAYS">
+                                                 <font>
+                                                     <Font name="SansSerif Regular" size="14.0" />
+                                                 </font>
+                                             </TextArea>
+                                             <Button fx:id="buttonSend" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="84.0" prefWidth="101.0" scaleShape="false" text="Send" textAlignment="CENTER" HBox.hgrow="NEVER">
+                                       <textFill>
+                                          <RadialGradient centerX="0.36343614855526823" centerY="0.7992424030195584" radius="0.5">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </RadialGradient>
+                                       </textFill>
+                                       <font>
+                                          <Font name="CentSchbkCyrill BT Bold" size="25.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                   <rotationAxis>
+                       <Point3D />
+                   </rotationAxis>
+               </AnchorPane>
+           </content>
+         </Tab>
+         <Tab onSelectionChanged="#initStatistics" text="Statistics">
+           <content>
+             <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <GridPane fx:id="gridStatistics" maxWidth="1.7976931348623157E308" prefHeight="425.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                       <columnConstraints>
+                         <ColumnConstraints minWidth="10.0" prefWidth="180.0" />
+                         <ColumnConstraints minWidth="3.20001220703125" prefWidth="180.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="360.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints maxHeight="203.20000610351562" minHeight="8.7999921798706" prefHeight="80.0" vgrow="SOMETIMES" />
+                         <RowConstraints maxHeight="238.4000078201294" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                         <RowConstraints maxHeight="279.80001678466795" minHeight="10.0" prefHeight="132.4" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="186.80003967285154" minHeight="10.0" prefHeight="132.4" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <DatePicker fx:id="statisticsStartDate" prefHeight="26.0" prefWidth="168.0" promptText="Start Date">
+                              <opaqueInsets>
+                                 <Insets />
+                              </opaqueInsets>
+                              <GridPane.margin>
+                                 <Insets left="10.0" right="10.0" />
+                              </GridPane.margin></DatePicker>
+                           <DatePicker fx:id="statisticsEndDate" prefHeight="26.0" prefWidth="168.0" promptText="End Date" GridPane.columnIndex="1" />
+                           <TextField fx:id="statisticsTextField" prefHeight="26.0" prefWidth="245.0" promptText="Friend informations" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                              <GridPane.margin>
+                                 <Insets left="10.0" right="20.0" />
+                              </GridPane.margin></TextField>
+                           <Button fx:id="statisticsFriendsMessages" mnemonicParsing="false" onAction="#handleFriendsMessages" prefHeight="70.0" prefWidth="149.0" text="Friends &amp; Messages" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="20.0" right="20.0" />
+                              </GridPane.margin></Button>
+                           <Button fx:id="statisticsFriendMessages" mnemonicParsing="false" onAction="#handleFriendMessages" prefHeight="70.0" prefWidth="130.0" text="Friend Messages" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="20.0" right="20.0" />
+                              </GridPane.margin>
+                              <font>
+                                 <Font name="CentSchbkCyrill BT Bold" size="20.0" />
+                              </font></Button>
+                           <Button fx:id="statisticsSave" alignment="CENTER" mnemonicParsing="false" onAction="#handleSaveStatistics" prefHeight="70.0" prefWidth="130.0" text="Save" textAlignment="JUSTIFY" GridPane.rowIndex="3">
+                              <GridPane.margin>
+                                 <Insets left="25.0" right="25.0" />
+                              </GridPane.margin>
+                              <font>
+                                 <Font name="Century751 No2 BT Bold" size="27.0" />
+                              </font>
+                              <textFill>
+                                 <RadialGradient centerX="0.24229075730109528" centerY="0.8901515205701193" focusAngle="125.69" focusDistance="-0.1834861947855818" radius="0.6467889820763824">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </RadialGradient>
+                              </textFill></Button>
+                           <GridPane fx:id="gridTxtPdf" maxHeight="70.4" prefHeight="70.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                             <columnConstraints>
+                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                             </columnConstraints>
+                             <rowConstraints>
+                               <RowConstraints maxHeight="31.9999755859375" minHeight="10.0" prefHeight="31.9999755859375" vgrow="SOMETIMES" />
+                               <RowConstraints maxHeight="30.4" minHeight="10.0" prefHeight="28.8000244140625" vgrow="SOMETIMES" />
+                             </rowConstraints>
+                              <children>
+                                 <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="65.0" text="TXT">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <textFill>
+                                       <RadialGradient centerX="0.5088105642848078" centerY="0.5" radius="0.5">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="1.0" green="1.0" blue="1.0" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="1.0" green="1.0" blue="1.0" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </RadialGradient>
+                                    </textFill>
+                                    <font>
+                                       <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <padding>
+                                       <Insets left="25.0" />
+                                    </padding></Label>
+                                 <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="63.0" text="PDF" GridPane.columnIndex="1">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <font>
+                                       <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <textFill>
+                                       <RadialGradient centerX="0.5088105642848078" centerY="0.5" radius="0.5">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="1.0" green="1.0" blue="1.0" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="1.0" green="1.0" blue="1.0" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </RadialGradient>
+                                    </textFill>
+                                    <padding>
+                                       <Insets left="18.0" />
+                                    </padding></Label>
+                                 <RadioButton fx:id="txtRadioButton" mnemonicParsing="false" onAction="#handleTxtRadioButton" prefHeight="20.0" prefWidth="44.0" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <padding>
+                                       <Insets left="28.0" />
+                                    </padding></RadioButton>
+                                 <RadioButton fx:id="pdfRadioButton" mnemonicParsing="false" onAction="#handlePdfRadioButton" prefHeight="18.0" prefWidth="9.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <padding>
+                                       <Insets left="25.0" />
+                                    </padding></RadioButton>
+                              </children>
+                              <GridPane.margin>
+                                 <Insets left="24.0" right="24.0" />
+                              </GridPane.margin>
+                           </GridPane>
+                           <TextArea fx:id="statisticsTextArea" prefHeight="62.0" prefWidth="360.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowSpan="4">
+                              <font>
+                                 <Font size="20.0" />
+                              </font></TextArea>
+                        </children>
+                     </GridPane>
+                  </children>
+               </AnchorPane>
+           </content>
+         </Tab>
+          <Tab text="Account">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <Button fx:id="buttonLogOut" layoutX="384.0" layoutY="173.0" mnemonicParsing="false" onAction="#onButtonLogOutClick" text="Log out">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Button>
+                  </children></AnchorPane>
+              </content>
+          </Tab>
+      </tabs>
+    </TabPane>
+</AnchorPane>
