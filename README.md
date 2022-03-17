@@ -14,10 +14,9 @@ public si notificarea utilizatorilor care s-au inregistrat la acel eveniment pe 
 apropie data cand acesta are loc. De asemenea, aplicatia ar trebui sa permita 
 dezabonarea utilizatorilor de la aceste notificari
 
-1. Datele se citesc obligatoriu dintr-o baza de date: Se va folosi interfata Repository de la 
-laborator
+1. Datele se citesc obligatoriu dintr-o baza de date
 2. Functionalitati noi adaugate: 
-  a. F5 si F6 din CerinteProiectLaborator_GUI_MAP.pdf
+  a. F5 si F6
   b. Generati urmatoarele rapoarte si oferiti posibilitatea salvarii acestora intr-un fisier pdf
         i. Activitatile unui utilizator dintr-o perioada calendaristica, referitor la prietenii noi 
 creati si mesajele primite in acea perioada
