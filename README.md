@@ -28,10 +28,10 @@ calendaristica data
 evalua la prezentare.
 
 Observatii:Proiect realizat in echipa formata din 2 membrii
-https://github.com/Stoian256/Socialnetwork/blob/main/images/friends.jpeg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/log_in_register.jpg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/messages.jpeg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/profile_1.jpeg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/requests.jpeg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/sent_requests.jpeg
-https://github.com/Stoian256/Socialnetwork/blob/main/images/statistics.jpeg
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/friends.jpeg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/log_in_register.jpg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/messages.jpeg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/profile_1.jpeg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/requests.jpeg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/sent_requests.jpeg)
+![alt text]https://github.com/Stoian256/Socialnetwork/blob/main/images/statistics.jpeg)
